@@ -1,4 +1,3 @@
-import { com } from './packer';
-import Packer = com.mobiquity.packer.Packer;
+import { Packer } from './packer';
 
-Packer.pack('ffff');
+Packer.pack('TODO');
