@@ -1,6 +1,6 @@
 import { readFileSync } from 'fs';
 
-const LINE_PATTERN = /\((\d+),(\d.+),€(\d+)\)/;
+const LINE_PATTERN = /\((\d+),(\d*\.?\d+),€(\d*\.?\d+)\)/;
 
 export class FileParser {
   static parseFile(src: string): Package[] {
@@ -32,7 +32,7 @@ export class FileParser {
       return {
         index: parseInt(index, 10),
         weight: parseFloat(weight),
-        price: parseInt(price, 10),
+        price: parseFloat(price),
       };
     });
   }

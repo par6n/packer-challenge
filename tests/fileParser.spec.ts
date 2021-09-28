@@ -30,6 +30,13 @@ describe('parses the input file correctly', () => {
     expect(packages[1].items[0].weight).toBe(15.3);
   });
 
+  it('handles integer weight and decimal prices', () => {
+    const packages = FileParser.parseString('20 : (1,5,€6.7)');
+    expect(packages).toHaveLength(1);
+    expect(packages[0].items[0].weight).toBe(5);
+    expect(packages[0].items[0].price).toBe(6.7);
+  });
+
   it('parses a file', () => {
     const packages = FileParser.parseFile('./resources/example_input');
 
