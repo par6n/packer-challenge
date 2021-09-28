@@ -21,4 +21,5 @@ src/
 ```bash
 yarn install # install the dependencies
 yarn test # runs the unit and integration tests
+yarn build # builds the project for delivery in `build` directory
 ```
