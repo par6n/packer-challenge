@@ -52,7 +52,7 @@ export class Packer {
     let totalValue = 0;
     let totalWeight = 0;
     let remainingItems = items.sort((a, b) => {
-      return b.price - a.price;
+      return b.price / b.weight - a.price / b.weight;
     });
     const addedItems = [];
 
